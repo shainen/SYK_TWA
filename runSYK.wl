@@ -11,7 +11,7 @@
 (*SetDirectory[NotebookDirectory[]]*)
 
 
-SetDirectory[Directory[]<>"/fermionTWA"];
+SetDirectory[Directory[]<>"/SYK_TWA"];
 
 
 SetSystemOptions["ParallelOptions" -> "ParallelThreadNumber" -> 1];

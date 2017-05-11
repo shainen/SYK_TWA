@@ -11,7 +11,7 @@
 (*SetDirectory[NotebookDirectory[]]*)
 
 
-SetDirectory[Directory[]<>"/fermionTWA"];
+SetDirectory[Directory[]<>"/SYK_TWA"];
 
 
 <<dynComplex.wl
