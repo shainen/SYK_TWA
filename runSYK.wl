@@ -71,13 +71,14 @@ fermOc=0;
 Table[
 JcoupNums=getSYKCoups[sites];
 pathsForward=singleRunShort[SYKEqs,randomInitsFermiHubbard,times];
-TcoupNums=getHopCoup[sites];
-pathsHop=singleRunShort[HopEqs,Flatten[randomInitsFHMid[0,Last@pathsForward]],{delT}];
+TcoupNums=getHopCoups[sites];
+pathsHop=singleRunShort[HopEqs,Flatten[randomInitsFHMid[0,Last@pathsForward]],midTimes];
 JcoupNums=-JcoupNums;
 pathsBackwards=singleRunShort[SYKEqs,Flatten[randomInitsFHMid[0,Last@pathsHop]],times];
 obsForward=Chop[obsfun/@pathsForward];
+obsHop=Chop[obsfun/@pathsHop];
 obsBackwards=Chop[obsfun/@pathsBackwards];
-AddTo[fermOc,{obsForward,obsBackwards}/runs];
+AddTo[fermOc,{obsForward,obsHop,obsBackwards}/runs];
 ,{rr,runs}];
 
 

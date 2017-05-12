@@ -1,6 +1,6 @@
 (* ::Package:: *)
 
-(*pathToStart="/projectnb/twambl/170320_5_startTWAs16f8_half/rundefined/start.dat";*)
+pathToStart="/projectnb/twambl/170511_1_startSYKs20/rundefined/start.dat";
 
 
 (*pathToStart="/Users/shainen/Dropbox/Research/fTWA/SYK Echo/start.dat";*)
@@ -15,7 +15,7 @@ delT=0.2;
 midTimes=N[Range[0,delT,dt]];
 
 
-runs=2;
+runs=100;
 
 
 length=20;
