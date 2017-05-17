@@ -8,7 +8,7 @@
 (*setup*)
 
 
-(*SetDirectory[NotebookDirectory[]]*)
+SetDirectory[NotebookDirectory[]]
 
 
 SetDirectory[Directory[]<>"/SYK_TWA"];
@@ -52,17 +52,17 @@ Tcoup[a_,b_]:=TcoupNums[[a,b]]
 
 
 getSYKCoups=Function[{sites},
-randsR=RandomVariate[NormalDistribution[0,1],{sites,sites,sites,sites}];
-randsI=RandomVariate[NormalDistribution[0,1],{sites,sites,sites,sites}];
+randsR=RandomVariate[NormalDistribution[0,1/Sqrt[2]],{sites,sites,sites,sites}];
+randsI=RandomVariate[NormalDistribution[0,1/Sqrt[2]],{sites,sites,sites,sites}];
 randComp=randsR+I*randsI;
 randAntiSym=randComp+Conjugate[Transpose[randComp,{4,3,2,1}]];
-randNorm=randAntiSym/2/sites^2;
+randNorm=randAntiSym/Sqrt[2];
 randNorm
 ];
 
 
 getHopCoups=Function[{sites},
-rands=RandomVariate[NormalDistribution[0,1],{sites,sites}]/sites;
+rands=RandomVariate[NormalDistribution[0,1],{sites,sites}];
 rands
 ];
 
@@ -74,7 +74,7 @@ pathsForward=singleRunShort[SYKEqs,randomInitsFermiHubbard,times];
 TcoupNums=getHopCoups[sites];
 pathsHop=singleRunShort[HopEqs,Flatten[randomInitsFHMid[0,Last@pathsForward]],midTimes];
 JcoupNums=-JcoupNums;
-pathsBackwards=singleRunShort[SYKEqs,Flatten[randomInitsFHMid[0,Last@pathsHop]],times];
+pathsBackwards=singleRunShort[SYKEqs,Flatten[randomInitsFHMid[0,Last@pathsHop]],backTimes];
 obsForward=Chop[obsfun/@pathsForward];
 obsHop=Chop[obsfun/@pathsHop];
 obsBackwards=Chop[obsfun/@pathsBackwards];
