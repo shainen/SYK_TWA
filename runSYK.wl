@@ -8,7 +8,7 @@
 (*setup*)
 
 
-SetDirectory[NotebookDirectory[]]
+(*SetDirectory[NotebookDirectory[]]*)
 
 
 SetDirectory[Directory[]<>"/SYK_TWA"];
