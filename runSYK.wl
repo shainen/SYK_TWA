@@ -45,26 +45,10 @@ values[[1,Position[midPairs,{#,#}][[1,1]]]]+1/2&/@Range[numferm]
 Get[pathToStart];
 
 
-Jcoup[a_,b_,c_,d_]:=JcoupNums[[a,b,c,d]]
+(*Jcoup[a_,b_,c_,d_]:=JcoupNums[[a,b,c,d]]*)
 
 
-Tcoup[a_,b_]:=TcoupNums[[a,b]]
-
-
-getSYKCoups=Function[{sites},
-randsR=RandomVariate[NormalDistribution[0,1/Sqrt[2]],{sites,sites,sites,sites}];
-randsI=RandomVariate[NormalDistribution[0,1/Sqrt[2]],{sites,sites,sites,sites}];
-randComp=randsR+I*randsI;
-randAntiSym=randComp+Conjugate[Transpose[randComp,{4,3,2,1}]];
-randNorm=randAntiSym/Sqrt[2];
-randNorm
-];
-
-
-getHopCoups=Function[{sites},
-rands=RandomVariate[NormalDistribution[0,1],{sites,sites}];
-rands
-];
+(*Tcoup[a_,b_]:=TcoupNums[[a,b]]*)
 
 
 fermOc=0;
