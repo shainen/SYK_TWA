@@ -16,7 +16,7 @@ midTimes=N[Range[0,delT,dt]];
 
 
 extra=1/4;
-backTimes=N[Range[0,(1+extra)*delT,dt]];
+backTimes=N[Range[0,(1+extra)*tmax,dt]];
 
 
 runs=100;
