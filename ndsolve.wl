@@ -13,3 +13,6 @@ randomInitsFermiHubbard:=Flatten[{Em[#1,#2][0]==randomEm[#1,#2]&@@@midPairs,El[#
 
 
 meanInitsFermiHubbard:=Flatten[{Em[#1,#2][0]==meanEm[#1,#2]&@@@midPairs,El[#1,#2][0]==meanEl[#1,#2]&@@@lowPairs}]
+
+
+randomInitsFHMid[st_,obs_] := Flatten[{Em[#1,#2][st]==obs[[1,Position[midPairs,{#1,#2}][[1,1]]]]&@@@midPairs,El[#1,#2][st]==obs[[2,Position[lowPairs,{#1,#2}][[1,1]]]]&@@@lowPairs}]
