@@ -62,7 +62,7 @@ complex=real+I*imag;
 Jcoup=ArrayReshape[complex,{sites,sites,sites,sites}];
 
 
-coup=Import[pathToJcoup<>"flatTcoup.CSV","Data"];
+coup=Import[pathToTcoup<>"flatTcoup.CSV","Data"];
 Tcoup=ArrayReshape[coup,{sites,sites}];
 
 
