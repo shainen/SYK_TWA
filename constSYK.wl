@@ -1,28 +1,37 @@
 (* ::Package:: *)
 
-pathToStart="/projectnb/twambl/170524_2_startSYKs20_staticcoups/rundefined/start.dat";
+(*pathToStart="/projectnb/twambl/170524_2_startSYKs20_staticcoups/rundefined/start.dat";*)
 
 
 (*pathToStart="/Users/shainen/Dropbox/Research/fTWA/SYK Echo/start.dat";*)
 
 
-tmax=6;
-dt=0.01;
-times=N[Range[0,tmax,dt]];
+pathToJcoup="/projectnb/twambl/170525_1_s18f9_makemats/";
 
 
-delT=0.2;
-midTimes=N[Range[0,delT,dt]];
+pathToTcoup="/projectnb/twambl/170527_1_s18f9_makeperts/";
+
+
+tmax=0.06;
+dt=0.0001;
+times=N[Range[0,tmax-dt,dt]];
+
+
+delT=0.002;
+midTimes=N[Range[0,delT-dt,dt]];
 
 
 extra=1/4;
-backTimes=N[Range[0,-(1+extra)*tmax,-dt]];
+backTimes=N[Range[0,-(1+extra)*tmax+dt,-dt]];
+
+
+Length[backTimes]
 
 
 runs=10;
 
 
-length=20;
+length=18;
 
 
 sites=length;

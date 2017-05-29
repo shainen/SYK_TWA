@@ -1,11 +1,11 @@
 (* ::Package:: *)
 
-getHopCoups=Function[{sites},
+(*getHopCoups=Function[{sites},
 rands=RandomVariate[NormalDistribution[0,1],{sites,sites}];
 rands
-];
+];*)
 makeDSolveStartHop=Function[{observables},
-Tcoup=getHopCoups[sites];
+(*Tcoup=getHopCoups[sites];*)
 Block[{
 hamHop=Total[(Tcoup[[#1,#2]]
 (hEm[#1,#2]+hEm[#2,#1])

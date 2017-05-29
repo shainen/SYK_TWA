@@ -56,6 +56,16 @@ observables={Em[#1,#2]&@@@midPairs,El[#1,#2]&@@@lowPairs
 };
 
 
+real=Import[pathToJcoup<>"flatJreal.CSV","Data"];
+imag=Import[pathToJcoup<>"flatJimag.CSV","Data"];
+complex=real+I*imag;
+Jcoup=ArrayReshape[complex,{sites,sites,sites,sites}];
+
+
+coup=Import[pathToJcoup<>"flatTcoup.CSV","Data"];
+Tcoup=ArrayReshape[coup,{sites,sites}];
+
+
 Timing[SYKEqs=makeDSolveStartSYK[observables];]
 
 

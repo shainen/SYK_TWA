@@ -1,15 +1,15 @@
 (* ::Package:: *)
 
-getSYKCoups=Function[{sites},
+(*getSYKCoups=Function[{sites},
 randsR=RandomVariate[NormalDistribution[0,1/Sqrt[2]],{sites,sites,sites,sites}];
 randsI=RandomVariate[NormalDistribution[0,1/Sqrt[2]],{sites,sites,sites,sites}];
 randComp=randsR+I*randsI;
 randAntiSym=randComp+Conjugate[Transpose[randComp,{4,3,2,1}]];
 randNorm=randAntiSym/Sqrt[2];
 randNorm
-];
+];*)
 makeDSolveStartSYK=Function[{observables},
-Jcoup=getSYKCoups[sites];
+(*Jcoup=getSYKCoups[sites];*)
 Block[{
 hamInt=Total[(Jcoup[[#1,#2,#3,#4]](
 sym1(
