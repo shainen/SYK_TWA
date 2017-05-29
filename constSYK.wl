@@ -1,6 +1,6 @@
 (* ::Package:: *)
 
-(*pathToStart="/projectnb/twambl/170524_2_startSYKs20_staticcoups/rundefined/start.dat";*)
+pathToStart="/projectnb/twambl/170529_1_start_fromQM/rundefined/start.dat";
 
 
 (*pathToStart="/Users/shainen/Dropbox/Research/fTWA/SYK Echo/start.dat";*)
