@@ -9,7 +9,7 @@
 pathToJcoup="/projectnb/twambl/170525_1_s18f9_makemats/";
 
 
-pathToTcoup="/projectnb/twambl/170527_1_s18f9_makeperts/";
+pathToTcoup="/projectnb/twambl/170527_1_s18f9_makepert/";
 
 
 tmax=0.06;
