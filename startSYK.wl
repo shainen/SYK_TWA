@@ -59,7 +59,9 @@ observables={Em[#1,#2]&@@@midPairs,El[#1,#2]&@@@lowPairs
 real=Import[pathToJcoup<>"flatJreal.CSV","Data"];
 imag=Import[pathToJcoup<>"flatJimag.CSV","Data"];
 complex=real+I*imag;
-Jcoup=ArrayReshape[complex,{sites,sites,sites,sites}];
+Jfull=ArrayReshape[complex,{sites,sites,sites,sites}];
+Jsym = Jfull + Conjugate[Transpose[Jfull,{4,3,2,1}]];
+Jcoup= Jsym/Sqrt[2];
 
 
 coup=Import[pathToTcoup<>"flatTcoup.CSV","Data"];
