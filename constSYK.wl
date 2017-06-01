@@ -12,12 +12,12 @@ pathToJcoup="/projectnb/twambl/170525_1_s18f9_makemats/";
 pathToTcoup="/projectnb/twambl/170527_1_s18f9_makepert/";
 
 
-tmax=0.06;
+(*tmax=0.06;*)
 dt=0.0001;
 times=N[Range[0,tmax-dt,dt]];
 
 
-delT=0.002;
+delT=0.05;
 midTimes=N[Range[0,delT-dt,dt]];
 
 
@@ -28,7 +28,7 @@ backTimes=N[Range[0,-(1+extra)*tmax+dt,-dt]];
 Length[backTimes]
 
 
-runs=10;
+runs=1000;
 
 
 length=18;
