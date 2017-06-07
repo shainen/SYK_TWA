@@ -32,7 +32,7 @@ cd $$SCRATCH_DIR/
 # Run the script
 cd ${prj}
 echo "SeedRandom[$$SGE_TASK_ID]" > randomSeed.wl
-echo "tmax=$$SGE_TASK_ID/100;" > constants.wl
+echo "tmax=$$SGE_TASK_ID/500;" > constants.wl
 cd ..
 time math -script ${prj}/runSYK.wl
 

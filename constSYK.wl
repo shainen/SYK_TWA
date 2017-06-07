@@ -17,7 +17,7 @@ dt=0.0001;
 times=N[Range[0,tmax-dt,dt]];
 
 
-delT=0.05;
+delT=0.3;
 midTimes=N[Range[0,delT-dt,dt]];
 
 
